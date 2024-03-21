@@ -8,11 +8,9 @@ public class Main {
         String tipoDeConta = "Corrente";
         double saldoBancario = 2500.00;
         double valoraSaque = 0;
-         int valordDepsoito = 0;
-        double faturaCaratao = 800;
+         int valordDeposito = 0;
+        double faturaCartao = 800;
         int recebeOpcao = 1;
-
-
 
         System.out.println("**************************");
         System.out.println("\nDados iniciais do cliente");
@@ -42,9 +40,9 @@ public class Main {
 
                     case 2:
                         System.out.println("Qual valor deseja depositar? \n");
-                         valordDepsoito = dados.nextInt();
-                         saldoBancario = saldoBancario + valordDepsoito;
-                         System.out.println("O valor depositado é : " + valordDepsoito);
+                         valordDeposito = dados.nextInt();
+                         saldoBancario = saldoBancario + valordDeposito;
+                         System.out.println("O valor depositado é : " + valordDeposito);
                          System.out.println("O saldo atual é\n: " + saldoBancario);
                          break;
 
@@ -54,17 +52,20 @@ public class Main {
                         saldoBancario = saldoBancario - valoraSaque;
                         if (valoraSaque < saldoBancario ){
                             System.out.println("""
-                                    Valor para saque indisponivel!
-                                   """);
+                                    Valor de saque foi :
+                                   """ + valoraSaque);
+                            System.out.println("O saldo atual é :" + saldoBancario);
                             break;
 
                         }
-                            System.out.println("O valor de saque foi : " + valoraSaque);
-                            System.out.println("O saldo atual é :\n" + saldoBancario);
+                        else if (valoraSaque > saldoBancario) {
+                            System.out.println("Saldo insuficiente para saque!");
                             break;
+                        }
+
 
                     case 4:
-                        System.out.println("O valor da fatura do seu cartão é :\n" + faturaCaratao);
+                        System.out.println("O valor da fatura do seu cartão é :\n" + faturaCartao);
                         break;
 
                     case 5:

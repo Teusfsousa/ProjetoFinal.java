@@ -52,10 +52,10 @@ public class Main {
                         System.out.println("Qual o valor que deseja sacar? : ");
                         valoraSaque = dados.nextDouble();
                         saldoBancario = saldoBancario - valoraSaque;
-                        if (valoraSaque > saldoBancario || true){
+                        if (valoraSaque < saldoBancario ){
                             System.out.println("""
                                     Valor para saque indisponivel!
-                                   \n""");
+                                   """);
                             break;
 
                         }
